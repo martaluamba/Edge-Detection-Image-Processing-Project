@@ -2,7 +2,7 @@
 Converts the .pgm output of the C program into PNG files.
 
 Install once:   pip install pillow
-Usage:          python pgm_to_png.py
+Usage:          python3 pgm_to_png.py
 
 Creates:
   - one enlarged .png for every .pgm file (same name)
