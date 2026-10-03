@@ -1,4 +1,4 @@
-# Kernels on DTEK-V: edge detection with convolution kernels
+# Kernels on DTEK-V: Edge Detection with Convolution Kernels
 
 Applies image kernels (Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian) to 64x64 grayscale images, with or without a blur pass first. There is a PC version for testing and a board version for the DTEK-V (RISC-V). The board version is controlled with the switches and the push button, uses polling, and prints the result to the terminal as a text PGM.
 
@@ -82,7 +82,7 @@ In the PC version, pgm_to_png_PC.py, the code shows fixed names for all the 27 o
 ## Notes
 
 - Edge counting uses a threshold of 50 and ignores a 3-pixel border.
-- The board program uses only `print()` and `print_dec()` from the lab library.
+- The board program uses no printf, memcpy or abs: it uses only `print()` and `print_dec()` from the lab library.
 - `handle_interrupt()` is an empty stub required by the boot code.
 
 ## Contributions
