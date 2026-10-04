@@ -91,4 +91,4 @@ I/O board interface (switches, button, LEDs, exit condition), Python tools, test
 on the PC and the DTEK-V board. Parts of the code were written with AI assistance (Claude); 
 I reviewed, compiled and tested them.
 
-Marcus Engberg: design of the objectives and requirements, kernels (Sobel X, Laplacian), kernel convolution function and pooling (using switches, buttons, and LEDs).
+Marcus Engberg: design of the objectives and requirements, kernels (Sobel X, Laplacian), kernel convolution function and polling (using switches, buttons, and LEDs).
