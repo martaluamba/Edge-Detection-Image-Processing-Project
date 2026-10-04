@@ -2,6 +2,16 @@
 
 Applies image kernels (Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian) to 64x64 grayscale images, with or without a blur pass first. There is a PC version for testing and a board version for the DTEK-V (RISC-V). The board version is controlled with the switches and the push button, uses polling, and prints the result to the terminal as a text PGM.
 
+## Features
+
+- Three built-in test images (mug, shapes, noisy)
+- Kernels: Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian (LoG)
+- Optional 3x3 blur before the kernel (back-to-back)
+- Edge counting with a threshold
+- Controlled with switches and a push button, with an exit switch combination
+- PC version for testing the algorithms before running on the board
+- Python tools to convert images to C arrays and PGM output to PNG
+  
 ## Folder structure
 
 ```
