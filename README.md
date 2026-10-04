@@ -54,7 +54,6 @@ dtekv-run main.bin
 | SW4 | Laplacian |
 | SW5 | LoG |
 | SW6 | Blur first (up = blur) |
-| SW8 + SW9 | Both up: stop the program |
 | Button | Second push button, one press = one run |
 
 Rules:
@@ -72,8 +71,8 @@ Rules:
 3. In the folder with the `.pgm` files, run:
 
 ```bash
-python tools/pgm_to_png_board.py            # all .pgm files
-python tools/pgm_to_png_board.py mug_*.pgm  # only the listed files
+python tools/pgm_to_png_board.py                  # all .pgm files
+python tools/pgm_to_png_board.py [pgm_file_name].pgm  # only the listed files
 ```
 
 This creates one enlarged `.png` per `.pgm` and a `grid.png` with all the converted images. Each run overwrites `grid.png`.
