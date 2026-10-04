@@ -86,4 +86,9 @@ In the PC version, pgm_to_png_PC.py, the code shows fixed names for all the 27 o
 - `handle_interrupt()` is an empty stub required by the boot code.
 
 ## Contributions
+Nzumba Marta Luamba: project design, kernels (Sobel Y, LoG), verification code,
+I/O board interface (switches, button, LEDs, exit condition), Python tools, testing
+on the PC and the DTEK-V board. Parts of the code were written with AI assistance (Claude); 
+I reviewed, compiled and tested them.
 
+Marcus Engberg: design of the objectives and requirements, kernels (Sobel X, Laplacian), kernel convolution function and pooling (using switches, buttons, and LEDs).
