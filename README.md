@@ -4,13 +4,13 @@ Applies image kernels (Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian) to 64
 
 ## Features
 
-- Three built-in test images (mug, shapes, noisy)
-- Kernels: Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian (LoG)
-- Optional 3x3 blur before the kernel (back-to-back)
-- Edge counting with a threshold
-- Controlled with switches and a push button, with an exit switch combination
-- PC version for testing the algorithms before running on the board
-- Python tools to convert images to C arrays and PGM output to PNG
+- Three built-in test images (mug, shapes, noisy).
+- Kernels: Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian (LoG).
+- Optional 3x3 blur before the kernel (back-to-back).
+- Edge counting with a threshold.
+- Controlled with switches and a push button, and matching LEDs.
+- PC version for testing the algorithms before running on the board.
+- Python tools to convert images to C arrays and PGM output to PNG.
   
 ## Folder structure
 
