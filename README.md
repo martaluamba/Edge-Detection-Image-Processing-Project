@@ -25,7 +25,8 @@ visuals/[name_input]_kernels/    converted PNG images and grids
 `image_mug.h`, `image_shapes.h` and `image_noisy.h` are already included. To regenerate them:
 
 ```bash
-python3 tools/img_to_c.py   
+cd tools
+python3 img_to_c.py   
 ```
 ## Step 2a: run the PC version
 
