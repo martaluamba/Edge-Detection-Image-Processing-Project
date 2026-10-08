@@ -1,0 +1,43 @@
+Image: half black = 0 (until 31 pixel), half white = 0 (from 32), pixel 32x32
+
+Sobel_X result, pixel(32,32) = 255
+Sobel_Y result, pixel(32,32) = 0
+Laplacian result, pixel(32,32) = 0
+LoG result, pixel(32,32) = 85
+Sobel_X result, pixel(32,32) = 255
+Sobel_Y result, pixel(32,32) = 0
+Laplacian result, pixel(32,32) = 255
+LoG result, pixel(32,32) = 255
+
+Image: mug, edge threshold: 50
+Kernel     Blur     Edge pixels
+Sobel_X    no       760
+Sobel_X    yes      835
+Sobel_Y    no       794
+Sobel_Y    yes      859
+Laplacian  no       389
+Laplacian  yes      34
+LoG        no       1197
+LoG        yes      1085
+
+Image: shapes, edge threshold: 50
+Kernel     Blur     Edge pixels
+Sobel_X    no       280
+Sobel_X    yes      512
+Sobel_Y    no       272
+Sobel_Y    yes      488
+Laplacian  no       320
+Laplacian  yes      244
+LoG        no       636
+LoG        yes      885
+
+Image: noisy, edge threshold: 50
+Kernel     Blur     Edge pixels
+Sobel_X    no       1236
+Sobel_X    yes      543
+Sobel_Y    no       1165
+Sobel_Y    yes      513
+Laplacian  no       1679
+Laplacian  yes      225
+LoG        no       3080
+LoG        yes      1431
