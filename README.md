@@ -65,7 +65,7 @@ dtekv-run main.bin
 | SW4 | Laplacian |
 | SW5 | LoG |
 | SW6 | Blur first (up = blur) |
-| SW8-SW7 | Exit condition |
+| SW8-SW9 | Exit condition |
 | Button | Second push button, one press = one run |
 
 Rules:
