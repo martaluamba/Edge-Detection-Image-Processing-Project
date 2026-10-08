@@ -142,6 +142,9 @@ int main(void) {
 
     while (1) {    // polling loop: runs forever, no interrupts
         int sw = get_sw();      // read all switches (one bit per switch)
+        if (((sw >> 8) & 0x3) == 0x3) { // SW9 and SW8 up: leave the loop
+            break;                      
+        }
         int img_sel = sw & 0x3; //keep least significant bit: SW1-SW0: 0=nothing, mug=01, shapes=10, noisy=11
         int k_sel = (sw >> 2) & 0xF;           // 4 bits for the 4 kernels in switches SW2-SW5
         int use_blur  = (sw >> 6) & 0x1;   // SW6: blur first (back-to-back), 1=blur, 0=noblur
@@ -187,5 +190,7 @@ int main(void) {
         }
         last_btn = btn; // remember the button state for the next loop pass
     }
-    return 0; // never reached (infinite loop)
+    set_leds(0x3FF);                    // all LEDs on = program stopped
+    print("Program stopped.\n");
+    return 0; 
 }
