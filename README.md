@@ -20,7 +20,6 @@ src/pc_version/                  kernels.c, kernels_test.c, the three image head
 src/board_version/               kernels_board.c, image headers, Makefile, boot code,
                                  linker script and lab libraries
 tools/                           img_to_c.py (PNG -> C array), pgm_to_png.py (PGM -> PNG and grid)
-images/                          original PNG images
 visuals/pgm/                     PGM output (board and PC)
 visuals/[name_input]_kernels/    converted PNG images and grids
 ```
