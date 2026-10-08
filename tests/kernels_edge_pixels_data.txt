@@ -1,12 +1,12 @@
 Image: half black = 0 (until 31 pixel), half white = 0 (from 32), pixel 32x32
 
-Without blur:
+With blur:
 Sobel_X result, pixel(32,32) = 255
 Sobel_Y result, pixel(32,32) = 0
 Laplacian result, pixel(32,32) = 0
 LoG result, pixel(32,32) = 85
 
-With blur:
+Without blur:
 Sobel_X result, pixel(32,32) = 255
 Sobel_Y result, pixel(32,32) = 0
 Laplacian result, pixel(32,32) = 255
