@@ -1,4 +1,5 @@
 """
+External/AI‑generated code (all the script)
 Helper for the Kernel Image Processing project.
 
 Install once:   pip install pillow
