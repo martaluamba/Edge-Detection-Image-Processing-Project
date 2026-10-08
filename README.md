@@ -65,6 +65,7 @@ dtekv-run main.bin
 | SW4 | Laplacian |
 | SW5 | LoG |
 | SW6 | Blur first (up = blur) |
+| SW8-SW7 | Exit condition |
 | Button | Second push button, one press = one run |
 
 Rules:
@@ -73,7 +74,7 @@ Rules:
 - Image selected and no kernel switch up: the original image is printed.
 - More than one kernel switch up: an error message is printed.
 - The LEDs mirror SW0-SW6. LED9 is on while the board is processing.
-- After stopping, reset and reload to run again.
+- After the exit condition, reset and reload to run again.
 
 ## Step 3: convert the board output to PNG
 
@@ -98,9 +99,8 @@ In the PC version, pgm_to_png_PC.py, the code shows fixed names for all the 27 o
 ## Contributions
 The project was developed together: kernel selection and design, testing and debugging on the board, the Overleaf document, and GitHub management.
 
-Nzumba Marta Luamba: project design, implementation and testing of the kernels (Sobel Y, LoG), kernels verification code,
-I/O board menu interface (switches, button, LEDs), Python tools for download and creating input-images, testing on the PC and the DTEK-V board. 
+Nzumba Marta Luamba: project design, implementation and testing of the kernels (Sobel Y, LoG), kernels verification code, exit condition, I/O board menu interface (switches, button, LEDs,), testing on the PC and the DTEK-V board. 
 
 Marcus Engberg: design of the objectives and requirements, kernels (Sobel X, Laplacian), kernel convolution function and polling (using switches, buttons, and LEDs) based on lab 3.
 
-Parts of the code were written with AI assistance and then reviewed, compiled and tested by us on the PC and the DTEK-V board.
+Parts of the code were written with AI assistance (such as Python tools for download and creating input-images), then reviewed, compiled and tested by us on the PC and the DTEK-V board.
