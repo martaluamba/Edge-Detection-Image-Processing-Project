@@ -11,6 +11,7 @@ Applies image kernels (Sobel X, Sobel Y, Laplacian, Laplacian of Gaussian) to 64
 - Controlled with switches and a push button, and matching LEDs.
 - PC version for testing the algorithms before running on the board.
 - Python tools to convert images to C arrays and PGM output to PNG.
+- kenerls_board_performance_analysis.c is for the performance analysis of our project.
   
 ## Folder structure
 
