@@ -78,7 +78,7 @@ const Kernel kernels[] = {        // table indexed by kernel_id
     {"Laplacian", k_laplacian, 3, 1},   // 3
     {"LoG",       k_log,       5, 1},   // 4
 };
-// Convolution: slides the kernel K over in_buf and writes the result to out_buf.
+// Convolution: slides the kernel K over in_buf and writes the result to out_buf.//Partially AI
 void apply_kernel(const uint8_t *in_buf, uint8_t *out_buf, const Kernel *K) {
     int r = K->size / 2;                                // kernel radius: 1 for 3x3, 2 for 5x5
     for (int i = 0; i < IMG_SIZE; i++) out_buf[i] = 0;  // clear output, so the frame border stays black
@@ -97,7 +97,7 @@ void apply_kernel(const uint8_t *in_buf, uint8_t *out_buf, const Kernel *K) {
         }
     }
 }
-// Counts the pixels brighter than the threshold, ignoring a border of MARGIN pixels.
+// Counts the pixels brighter than the threshold, ignoring a border of MARGIN pixels.//AI function
 int count_edges(const uint8_t *buf, int threshold) {
     int n = 0;        // edge pixel counter
     for (int y = MARGIN; y < IMG_HEIGHT - MARGIN; y++) //skip the border rows
@@ -121,7 +121,7 @@ const uint8_t *process(const Image *img, int kernel_id, int use_blur) {
     return bufB; // final result is in B
 }
 
-// "download": print the result as a text PGM, one image row per line
+// "download": print the result as a text PGM, one image row per line //All this function is AI
 void print_pgm(const uint8_t *buf) {
     print("P2\n64 64\n255\n"); // PGM header: P2 = plain-text grayscale, width height, max value
     for (int y = 0; y < IMG_HEIGHT; y++) {    // one text line per image row
@@ -164,11 +164,11 @@ int main(void) {
             if(img_id < 0){    // SW1-0 = 00: no image chosen
                 print("No image selected (SW1-0 = 00)\n"); // comment line, ignored by the PGM reader
                 }
-            else if(k_sel == 0){ // no kernel switch: show the input image
+            else if(k_sel == 0){ // no kernel switch: show the input image //AI
                 print("# "); // comment line, ignored by the PGM reader
-                print(images[img_id].name);// image name
+                print(images[img_id].name);// image name //AI
                 print(", input\n");
-                print_pgm (images[img_id].data); // print the original pixels
+                print_pgm (images[img_id].data); // print the original pixels //AI
                 }
             else if(kernel_id == 0){ // several kernel switches up at once: invalid
                 print("Select only one kernel among SW2, SW3, SW4, SW5\n");
@@ -183,7 +183,7 @@ int main(void) {
                 print(use_blur ? ", blur, edges=" : ", no blur, edges="); // text chosen by the blur flag, ? is the same of if/else but compact
                 print_dec((unsigned int)count_edges(res, EDGE_THRESHOLD)); // number of edge pixels
                 print("\n");
-                print_pgm(res);    // print the result image as text
+                print_pgm(res);    // print the result image as text  //AI
                 set_leds(sw & 0x7F); //led9 off = done, showing only the switches kernels led
                 }
        
