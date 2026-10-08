@@ -1,4 +1,5 @@
 """
+External/AI‑generated code (all the script)
 Converts the .pgm files printed by the board into PNG files.
 
 Install once:   pip install pillow
