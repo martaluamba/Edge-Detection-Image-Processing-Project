@@ -95,7 +95,7 @@ int main(void) {
     printf("%s result, pixel(32,32) = %d\n", kernels[2].name,
            bufA[32 * IMG_WIDTH + 32]);
 
-    // Pipeline 3: blur then Sobel Y
+    // Pipeline 3: blur then Laplacian
     memcpy(bufA, original, sizeof(bufA));        // load image into A
     apply_kernel(bufA, bufB, &kernels[0]);       // blur:    A -> B
     apply_kernel(bufB, bufA, &kernels[3]);       // Laplacian B -> A
